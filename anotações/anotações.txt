@@ -1,0 +1,2 @@
+@property -> propriedade única de classe/objeto pra controlar como um atributo é lido, alterando o "molde" de 1 objeto específico
+@classmethod -> basicamente a versão maior do @property, que se aplica a todos os objetos, alterando o "molde" geral
