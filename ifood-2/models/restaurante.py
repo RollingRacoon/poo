@@ -3,9 +3,9 @@ from models.cardapio.itemcardapio import ItemCardapio
 class Restaurante:
     restaurantes = []
     def __init__(self, nome_restaurante, localizacao, tipo_de_comida, quantidade_funcionarios):
-        self.nome_restaurante = nome_restaurante
-        self.localizacao = localizacao
+        self.nome = nome_restaurante
         self.tipo_de_comida = tipo_de_comida
+        self.localizacao = localizacao
         self.quantidade_funcionarios = quantidade_funcionarios
         self._status = False
         self._avaliacoes = []
@@ -60,4 +60,6 @@ class Restaurante:
     def adicionar_cardapio(self, item):
         if isinstance(item, ItemCardapio):
             self._cardapio.append(item)
+        else:
+            raise ValueError("O item não pode ser None")
     
